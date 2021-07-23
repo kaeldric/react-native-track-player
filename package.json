@@ -6,13 +6,16 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "rimraf lib && tsc",
+    "dev-sync": "cp -r ./lib example/node_modules/react-native-track-player/player",
     "lint": "eslint \"src/**/*.ts\"",
     "format": "prettier --write \"src/**/*.ts\"",
-    "prepare": "yarn build",
+    "prepare": "yarn build && yarn build:plugin",
     "prepublishOnly": "yarn lint",
     "preversion": "yarn lint",
     "version": "yarn format && git add -A src",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "build:plugin": "tsc --build plugin",
+    "lint:plugin": "eslint plugin/src/*"
   },
   "files": [
     "lib/**/*",
@@ -65,6 +68,7 @@
     "react-native-windows": ">=0.63.0"
   },
   "devDependencies": {
+    "@tsconfig/node10": "^1.0.8",
     "@types/react-native": "^0.60.0",
     "@typescript-eslint/eslint-plugin": "^1.7.0",
     "@typescript-eslint/parser": "^1.7.0",
@@ -74,5 +78,8 @@
     "prettier": "^1.17.0",
     "rimraf": "^2.6.2",
     "typescript": "^3.2.4"
+  },
+  "dependencies": {
+    "@expo/config-plugins": "^3.0.5"
   }
 }

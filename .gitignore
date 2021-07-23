@@ -30,6 +30,9 @@ windows/RNTrackPlayer/project.lock.json
 
 # iOS
 
+# Expo
+plugin/build
+
 ## Various settings
 *.pbxuser
 !default.pbxuser
