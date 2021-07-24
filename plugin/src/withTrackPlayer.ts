@@ -5,7 +5,7 @@ import {
   withInfoPlist,
 } from '@expo/config-plugins'
 
-const pkg = require('react-native-track-player/player/package.json')
+const pkg = require('react-native-track-player/package.json')
 
 export interface Props {}
 

@@ -6,7 +6,7 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "rimraf lib && tsc",
-    "dev-sync": "cp -r ./lib example/node_modules/react-native-track-player/player",
+    "dev-sync": "cp -r ./lib example/node_modules/react-native-track-player",
     "lint": "eslint \"src/**/*.ts\"",
     "format": "prettier --write \"src/**/*.ts\"",
     "prepare": "yarn build && yarn build:plugin",
