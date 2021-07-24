@@ -21,6 +21,7 @@
     "lib/**/*",
     "ios/**/*",
     "android/**/*",
+    "plugin/**/*",
     "*.podspec"
   ],
   "contributors": [
